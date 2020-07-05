@@ -1,0 +1,24 @@
+.card-img-top{
+    display: inline-block;
+
+}
+
+.col-4 {
+    margin: 20px 0px;
+}
+
+.card-footer {
+    justify-content: center;
+}
+.card-title {
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+#card-description-title {
+    font-weight: bold;
+    text-shadow: #FC0 0px 0 10px;
+    /* text-align: right; */
+
+
+}
