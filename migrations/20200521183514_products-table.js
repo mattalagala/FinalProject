@@ -1,7 +1,7 @@
 const createProductsTable = `
 create table products (
 "products_id" serial primary key,
-"category_id" serial REFERENCES category (category_id),
+"category_id" uuid REFERENCES category (category_id),
 "products_manufacturer" text,
 "products_model" text,
 "products_color" text,

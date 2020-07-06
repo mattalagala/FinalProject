@@ -6,6 +6,7 @@ require('./passport')
 
 
 const db = require('./lib/db')
+const { validDescription } = require('./lib/validate')
 // const validate = require('./lib/validate')
 
 const app = express()
@@ -116,7 +117,26 @@ app.get('/add_project', function (req, res) {
 
 
 app.post('/add_project', (req, res)=>{
-  res.render('add_project', {description:"New ITEM ADDED"})
+  
+  const newDescription = req.body.description
+  if (validDescription(newDescription)) {
+    res.send("You Did Good")
+  } else {
+    res.status(400).send('bad input')
+  }
+  console.log(req.body, "IS IT GETTING PAST THIS!!!!")
+
+  db.createProject(newDescription)
+    .then((newProject)=> {
+      console.log("I AM IN createProject PROMISE")
+      res.render('new_project', {
+      description: newProject.description
+      })
+    })
+    .catch(()=>{
+      // res.status(500).send("We messed up")
+    })
+  
   // res.redirect('/login')
 })    
 
