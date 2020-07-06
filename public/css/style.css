@@ -22,3 +22,26 @@
 
 
 }
+
+#logout-message {
+
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+#project-description {
+  
+
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+#new-message {
+    margin-top: 200px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}

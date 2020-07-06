@@ -12,16 +12,15 @@
   <title>Project Vault</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/heroic-features.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/signin.css" rel="stylesheet">
 
 </head>
-
-<body>
-
+ <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -33,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="localhost:9999/">Home
+            <a class="nav-link" href="http://localhost:9999/">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -52,62 +51,26 @@
           <li class="nav-item">
             <a href="/form" class="nav-link" href="#">Form</a>
           </li>
-          <li class="nav-item">
-            <a href="/add_project" class="nav-link" href="#">Add Project</a>
-          </li>
         </ul>
   </nav>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Page Content -->
+  <div class="container"></div>
 
-  <!-- Page Content -->
-  <div class="container">
+      <div class="col-12" id="new-message">
+        <h1>{{description}}</h1>
+      </div>  
 
-    <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
-      <h1 class="display-3">One Stop For All Gearheads!</h1>
-      <p class="lead">We have a wide selection of equipment ranging from live performance to recording!</p>
-    </header>
-
-    <!-- Page Features -->
-   
-    <div class="row text-center justify-content-center">
-    {{#each lists}}
-      <div class="col-4">
-        {{!-- col-lg-2 col-md-2 mb-4 --}}
-        
-        <div class="card h-100">
-          <img class="card-img-top" src="{{this.category_picture}}" alt="">
-          <div class="card-body d-flex flex-column mt-auto">
-            <h4 class="card-title">{{this.category_name}}</h4>
-            <h6 id="card-description-title">Group Name</h2>
-            <p class="card-text">Lorem ipsum</p>
-            <h6 id="card-description-title">Description</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            <h6 id="card-description-title">Languages Used</h2>
-            <p class="card-text">JavaScript, React, SQL</p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="/category/{{this.category_id}}" class="btn btn-primary" id="checkout-btn">View Details</a>
-          </div>
-        </div>
-        
-      </div>
-    {{/each}}
-    </div>
-    <!-- /.row -->
-  
-  </div>
+</form>
   <!-- /.container -->
-</body>
-  <!-- Footer -->
+
+  {{!-- <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
     </div>
     <!-- /.container -->
-  </footer>
+  </footer> --}}
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

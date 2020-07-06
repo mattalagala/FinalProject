@@ -28,8 +28,8 @@ const isLoggedIn = (req, res, next) => {
   if (req.user){
     next()
   } 
-  else {
-    res.sendStatus(401)
+  else {    
+    res.redirect('/login')
   }
 }
 
@@ -56,7 +56,7 @@ app.get('/success', isLoggedIn, (req, res)=> {
 
 
 // Google Authentication
-app.get('/google',
+app.get('/login/google',
   passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 
@@ -79,7 +79,8 @@ app.get('/google/callback',
 app.get('/logout', (req, res)=>{
   req.session = null
   req.logout()
-  res.redirect('/logged_out')
+  res.render('login', {logoutMessage:"You've been logged out!"})
+  // res.redirect('/login')
 })
 
 
@@ -90,6 +91,36 @@ app.get('/', function (req, res) {
     res.render('index', {lists: lists})
   }) 
 })
+
+app.get('/login', function (req, res) {
+  db.getCategoryList()
+  .then((lists)=>{ 
+    res.render('login', {lists: lists})
+  }) 
+})
+
+app.get('/form', function (req, res) {
+  db.getCategoryList()
+  .then((lists)=>{ 
+    res.render('form', {lists: lists})
+  }) 
+})
+
+app.get('/add_project', function (req, res) {
+
+    res.render('add_project')
+ 
+})
+
+
+
+
+app.post('/add_project', (req, res)=>{
+  res.render('add_project', {description:"New ITEM ADDED"})
+  // res.redirect('/login')
+})    
+
+
 
 app.param('category_id', function (req, res, nextFn, category_id) {
  const getProductsPromise = db.getProducts(category_id)

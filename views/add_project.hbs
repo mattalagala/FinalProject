@@ -21,7 +21,7 @@
 </head>
 
 <body>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -58,48 +58,32 @@
         </ul>
   </nav>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Page Content -->
-  <div class="container">
+<main class="section">
+    <div class=container>
+      </div>  
 
-    <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
-      <h1 class="display-3">One Stop For All Gearheads!</h1>
-      <p class="lead">We have a wide selection of equipment ranging from live performance to recording!</p>
-    </header>
+        <form class="form-signin" action="/add_project" method="POST">
+        {{!-- <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> --}}
+        {{!-- <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> --}}
+        <label>Description</label>
+        <input id="project-description" type="text" name="description">
+        <input type="submit" value="Add Item">
+        {{!-- <div class="checkbox mb-3"> --}}
+        <label>
+        {{!-- <input type="checkbox" value="remember-me"> Remember me --}}
+        </label>
 
-    <!-- Page Features -->
-   
-    <div class="row text-center justify-content-center">
-    {{#each lists}}
-      <div class="col-4">
-        {{!-- col-lg-2 col-md-2 mb-4 --}}
-        
-        <div class="card h-100">
-          <img class="card-img-top" src="{{this.category_picture}}" alt="">
-          <div class="card-body d-flex flex-column mt-auto">
-            <h4 class="card-title">{{this.category_name}}</h4>
-            <h6 id="card-description-title">Group Name</h2>
-            <p class="card-text">Lorem ipsum</p>
-            <h6 id="card-description-title">Description</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            <h6 id="card-description-title">Languages Used</h2>
-            <p class="card-text">JavaScript, React, SQL</p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="/category/{{this.category_id}}" class="btn btn-primary" id="checkout-btn">View Details</a>
-          </div>
-        </div>
-        
-      </div>
-    {{/each}}
-    </div>
-    <!-- /.row -->
-  
+        <h1>{{description}}</h1>
+    
   </div>
-  <!-- /.container -->
+    </div>
+</main>
+  
+
+
 </body>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
