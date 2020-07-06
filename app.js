@@ -134,6 +134,7 @@ app.post('/add_project', (req, res)=>{
       })
     })
     .catch(()=>{
+      //NEED TO GET THIS FIXED
       // res.status(500).send("We messed up")
     })
   
