@@ -213,8 +213,7 @@ function bootupSequenceFailed (err) {
 function fetchCategoryList () {
   db.getCategoryList()
   .then((lists)=>{
-    // console.log ('the lists:')
-    // console.log (lists)
+
   })
 }
 
