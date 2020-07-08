@@ -2,6 +2,9 @@ const createCategoryTable = `
 create table category (
 "category_id" uuid primary key,
 "category_name" text,
+"category_description" text,
+"category_team_name" text,
+"category_languages" text,
 "category_picture" text,
 ctime timestamptz,
 mtime timestamptz default current_timestamp

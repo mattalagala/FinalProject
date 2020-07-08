@@ -100,14 +100,14 @@ app.get('/login', function (req, res) {
   }) 
 })
 
-app.get('/form', function (req, res) {
+app.get('/form', isLoggedIn, function (req, res) {
   db.getCategoryList()
   .then((lists)=>{ 
     res.render('form', {lists: lists})
   }) 
 })
 
-app.get('/add_project', function (req, res) {
+app.get('/add_project', isLoggedIn, function (req, res) {
 
     res.render('add_project')
  
@@ -118,24 +118,37 @@ app.get('/add_project', function (req, res) {
 
 app.post('/add_project', (req, res)=>{
   
-  const newDescription = req.body.description
-  if (validDescription(newDescription)) {
-    res.send("You Did Good")
+  const newProjectName = req.body.projectName
+  const newProjectDescription = req.body.projectDescription
+  const newTeamName = req.body.teamName
+  const languagesUsed = req.body.languagesUsed
+  // const newDescription = req.body.description
+  // const newDescription = req.body.description
+  // const newDescription = req.body.description
+  console.log('******************************', req.body, '******************************')
+  if (validDescription(newProjectName)) {
+    res.send("Project Loaded Successfully")
+  } else if (validDescription(newProjectDescription)) {
+    res.send("Project Loaded Successfully")
+  } else if (validDescription(newTeamName)) {
+    res.send("Project Loaded Successfully")
+  } else if (validDescription(languagesUsed)) {
+    res.send("Project Loaded Successfully")
   } else {
     res.status(400).send('bad input')
   }
   console.log(req.body, "IS IT GETTING PAST THIS!!!!")
 
-  db.createProject(newDescription)
+  db.createProject(newProjectName, newProjectDescription, newTeamName, languagesUsed)
     .then((newProject)=> {
       console.log("I AM IN createProject PROMISE")
       res.render('new_project', {
-      description: newProject.description
+      projectName: newProject.projectName
       })
     })
     .catch(()=>{
       //NEED TO GET THIS FIXED
-      // res.status(500).send("We messed up")
+      // res.status(500).send("The Function Didnt WOrk)
     })
   
   // res.redirect('/login')
@@ -163,11 +176,11 @@ app.param('category_id', function (req, res, nextFn, category_id) {
 
 app.get('/category/:category_id', isLoggedIn, function (req, res) {
   const theProducts = req.monkMusic.products
-  const productCategoryTitle = req.monkMusic.category[0]['category_name']
-  console.log(productCategoryTitle, '**#*#*#*#*#*#* CHECK THIS OUT!!')
+  const theCategory = req.monkMusic.category
+  console.log(theCategory, '**#*#*#*#*#*#* CHECK THIS OUT!!')
   db.getCategoryList()
   .then((lists)=>{ 
-    res.render('products_page', {theProducts:theProducts, categoryTitle: productCategoryTitle})
+    res.render('products_page', {theProducts:theProducts, theCategory: theCategory})
     }) 
   })
 

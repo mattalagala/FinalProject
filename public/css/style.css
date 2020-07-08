@@ -45,3 +45,18 @@
     font-size: large;
     font-weight: bold;
 }
+
+.masthead {
+    color: aliceblue;
+    height: 1vh;
+    min-height: 400px;
+    background-image: url('https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?cs=srgb&dl=blue-and-red-galaxy-artwork-1629236.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .lead {
+    
+    font-size: 30px;
+
+  }
