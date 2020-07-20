@@ -197,8 +197,7 @@ app.post("/add_project", upload.single("projectImage1"), (req, res, next) => {
   const newProjectDescription = req.body.projectDescription;
   const newTeamName = req.body.teamName;
   const languagesUsed = req.body.languagesUsed;
-  const java = req.body.JavaTest;
-  const react = req.body.ReactTest;
+
   const projectImage1 = req.file;
   const projectImage2 = req.file;
   if (req.file != null) {
