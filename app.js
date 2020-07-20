@@ -197,7 +197,8 @@ app.post("/add_project", upload.single("projectImage1"), (req, res, next) => {
   const newProjectDescription = req.body.projectDescription;
   const newTeamName = req.body.teamName;
   const languagesUsed = req.body.languagesUsed;
-
+  const java = req.body.JavaTest;
+  const react = req.body.ReactTest;
   const projectImage1 = req.file;
   const projectImage2 = req.file;
   if (req.file != null) {
@@ -226,8 +227,6 @@ app.post("/add_project", upload.single("projectImage1"), (req, res, next) => {
   } else {
     res.status(400).send("bad input");
   }
-  console.log(req.body, "IS IT GETTING PAST THIS!!!!");
-  console.log(req.file, "IS IT GETTING PAST IMAGGEE!!!!");
 
   db.createProject(
     newProjectName,
