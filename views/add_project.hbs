@@ -75,15 +75,21 @@
   </nav>
   <div class="container">
     <div class="py-5 text-center">
+
       <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
       <h2>Create A New Project</h2>
       <p class="lead">Please fill out all the following information and add screen captures so that your new project
         will display correctly.</p>
-    </div>
-    <div class="row justify-content-center">
 
+    </div>
+
+
+
+    <div class="row justify-content-center">
       <div class="col-md-8 order-md-1">
+
         <h4 class="mb-3">Project Section</h4>
+
         <form class="form-signin" action="/add_project" method="POST" enctype="multipart/form-data">
           {{!-- <form class="form-signin" action="/add_project" method="POST" enctype="multipart/form-data"> --}}
           <div class="row">
@@ -93,6 +99,41 @@
 
               <label>Project Description</label>
               <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label>Project URL</label>
+              <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label>Github Repo</label>
+              <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label>Project Links</label>
+              <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label>Cohort</label>
+              <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
+            </div>
+          </div>
+
+
+
+          <!-- IMAGE UPLOAD SECTION -->
+          <div class="row">
+            <div class="col-md-12 mb-3">Project Screenshots</div>
+
+            <div class="col-md-6 mb-3">
 
               <label>Project Image1</label>
               <input type="file" class="form-contrl-file" id="add-project-fields" name="projectImage1">
@@ -105,7 +146,9 @@
 
               <label>Project Image4</label>
               <input type="file" class="form-contrl-file" id="add-project-fields" name="projectImage4">
+            </div>
 
+            <div class="col-md-6 mb-3">
               <label>Project Image5</label>
               <input type="file" class="form-contrl-file" id="add-project-fields" name="projectImage5">
 
@@ -117,60 +160,66 @@
 
               <label>Project Image8</label>
               <input type="file" class="form-contrl-file" id="add-project-fields" name="projectImage8">
-
-              <h4 class="mb-3">Team Info</h4>
-              <label>Team Name</label>
-              <input type="text" class="form-control" id="add-project-fields" name="teamName">
-              <label>Languages Used</label>
-              <input type="text" class="form-control" id="add-project-fields" name="languagesUsed">
-
-
-
-
-              <div class="checkbox form-control">
-                <label>
-                  <input type="checkbox"> Check me out
-                </label>
-              </div>
-              <div class="checkbox form-control">
-                <label>
-                  <input type="checkbox" value="" checked>
-                  I'm selected because I seem like the safe choice
-                </label>
-              </div>
-              <div class="checkbox disabled form-control">
-                <label>
-                  <input type="checkbox" value="" disabled>
-                  Option is disabled because it is scary
-                </label>
-              </div>
-              <label class="checkbox-inline form-control">
-                <input type="checkbox" id="inlineCheckbox1" name="JavaTest" value="JAVA TEST"> JAVA TEST
-              </label>
-              <label class="checkbox-inline form-control">
-                <input type="checkbox" id="inlineCheckbox2" name="ReactTest" value="REACT.js TEST"> REACT.js TEST
-              </label>
-              <label class="checkbox-inline form-control">
-                <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-              </label>
-
-
-
-
-
-              <input type="submit" value="Add Item" class="btn btn-primary btn-lg ">
-
             </div>
+
           </div>
 
 
+          <h4 class="mb-3">Team Info</h4>
+          <label>Team Name</label>
+          <input type="text" class="form-control" id="add-project-fields" name="teamName">
+          <label>Languages Used</label>
+          <input type="text" class="form-control" id="add-project-fields" name="languagesUsed">
+
+
+
+
+          <div class="checkbox form-control">
+            <label>
+              <input type="checkbox"> Check me out
+            </label>
+          </div>
+          <div class="checkbox form-control">
+            <label>
+              <input type="checkbox" value="" checked>
+              I'm selected because I seem like the safe choice
+            </label>
+          </div>
+          <div class="checkbox disabled form-control">
+            <label>
+              <input type="checkbox" value="" disabled>
+              Option is disabled because it is scary
+            </label>
+          </div>
+          <label class="checkbox-inline form-control">
+            <input type="checkbox" id="inlineCheckbox1" name="JavaTest" value="JAVA TEST"> JAVA TEST
+          </label>
+          <label class="checkbox-inline form-control">
+            <input type="checkbox" id="inlineCheckbox2" name="ReactTest" value="REACT.js TEST"> REACT.js TEST
+          </label>
+          <label class="checkbox-inline form-control">
+            <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+          </label>
+
+
+
+
+
+          <input type="submit" value="Add Item" class="btn btn-primary btn-lg ">
+
         </form>
-
-
-
 
       </div>
     </div>
+
+
+
+
+
+
+
+  </div>
+  </div>
   </div>
 </body>
 
