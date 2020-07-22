@@ -14,13 +14,23 @@
 
   <!-- Bootstrap core CSS -->
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
 
   <!-- Custom styles for this template -->
   <link href="/css/heroic-features.css" rel="stylesheet">
+  <link href="/css/style2.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
 
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
 
 
 </head>
@@ -77,7 +87,7 @@
   </header>
   <!-- Page Features -->
 
-  <div class="container h-100" id="gallery">
+  {{!-- <div class="container h-100" id="gallery">
     <div class="row h-100 align-items-center">
       <div class="col-md-4 shrink">
         <img class="img-fluid" alt="Responsive image" src="/uploads/{{this.category_picture}}">
@@ -99,7 +109,83 @@
       </div>
     </div>
   </div>
+  </div> --}}
+
+
+  {{!-- <div>
+    Begin Separator
+  </div> --}}
+
+
+
+  <div class="gallery-section">
+    <div class="inner-width">
+      {{!-- <h1>My Gallery</h1> --}}
+      <div class="border"></div>
+      <div class="gallery" id="testGallery">
+
+        {{#if this.category_picture}}
+        <a href="/uploads/{{this.category_picture}}" class="image" value="Mac">
+          <img src="/uploads/{{this.category_picture}}" alt="Mac">
+        </a>
+        {{/if}}
+
+        {{#if this.category_picture2}}
+        <a href="/uploads/{{this.category_picture2}}" class="image" value="Mac">
+          <img src="/uploads/{{this.category_picture2}}" alt="Mac">
+        </a>
+        {{/if}}
+
+        {{#if this.category_picture3}}
+        <a href="/uploads/{{this.category_picture3}}" class="image" value="Mac">
+          <img src="/uploads/{{this.category_picture3}}" alt="Mac">
+        </a>
+        {{/if}}
+
+        {{#if this.category_picture4}}
+        <a href="/uploads/{{this.category_picture4}}" class="image" value="Mac">
+          <img src="/uploads/{{this.category_picture4}}" alt="Mac">
+        </a>
+        {{/if}}
+
+        {{#if this.category_picture5}}
+        <a href="/uploads/{{this.category_picture5}}" class="image" value="Mac">
+          <img src="/uploads/{{this.category_picture5}}" alt="Mac">
+        </a>
+        {{/if}}
+
+        {{#if this.category_picture6}}
+        <a href="/uploads/{{this.category_picture6}}" class="image" value="Mac">
+          <img src="/uploads/{{this.category_picture6}}" alt="Mac">
+        </a>
+        {{/if}}
+
+        {{#if this.category_picture7}}
+        <a href="/uploads/{{this.category_picture7}}" class="image" value="Mac">
+          <img src="/uploads/{{this.category_picture7}}" alt="Mac">
+        </a>
+        {{/if}}
+
+        {{#if this.category_picture8}}
+        <a href="/uploads/{{this.category_picture8}}" class="image" value="Mac">
+          <img src="/uploads/{{this.category_picture8}}" alt="Mac">
+        </a>
+        {{/if}}
+
+
+      </div>
+      <div class="border"></div>
+    </div>
   </div>
+
+  {{!-- 
+
+  <div>
+    End Separator
+  </div> --}}
+
+
+
 
 
   <!-- Contents -->
@@ -175,9 +261,21 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script>
+    $(".gallery").magnificPopup({
+      delegate: "a",
+      type: "image",
+      gallery: {
+        enabled: true,
+      },
+    });
+  </script>
 
-  <script src="/vendor/jquery/jquery.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
   <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/app.js"></script>
 
 </body>
 

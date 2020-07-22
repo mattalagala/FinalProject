@@ -176,36 +176,58 @@ const upload = multer({
   },
 });
 
-// Check File Type
-// function checkFileType(file, cb) {
-//   // Allowed ext
-//   const filetypes = /jpeg|jpg|png|gif/;
-//   // Check ext
-//   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-//   // Check mime
-//   const mimetype = filetypes.test(file.mimetype);
 
-//   if (mimetype && extname) {
-//     return cb(null, true);
-//   } else {
-//     cb("Error: Images Only!");
-//   }
-// }
+var cpUpload = upload.fields([
+  { name: "projectImage1" },
+  { name: "projectImage2" },
+  { name: "projectImage3" },
+  { name: "projectImage4" },
+  { name: "projectImage5" },
+  { name: "projectImage6" },
+  { name: "projectImage7" },
+  { name: "projectImage8" },
+]);
 
-app.post("/add_project", upload.single("projectImage1"), (req, res, next) => {
+
+app.post("/add_project", cpUpload, (req, res, next) => {
   const newProjectName = req.body.projectName;
   const newProjectDescription = req.body.projectDescription;
   const newTeamName = req.body.teamName;
   const languagesUsed = req.body.languagesUsed;
   const java = req.body.JavaTest;
   const react = req.body.ReactTest;
-  const projectImage1 = req.file;
-  const projectImage2 = req.file;
-  if (req.file != null) {
-    projectImage1 = req.file.filename;
+  const projectImage1 = req.files["projectImage1"][0].filename;
+  var projectImage2 = null
+  var projectImage3 = null
+  var projectImage4 = null
+  var projectImage5 = null
+  var projectImage6 = null
+  var projectImage7 = null
+  var projectImage8 = null
+
+  if (req.files["projectImage2"] != undefined) {
+    projectImage2 = req.files["projectImage2"][0].filename
+  }
+  if (req.files["projectImage3"] != undefined) {
+    projectImage3 = req.files["projectImage3"][0].filename
+  }
+  if (req.files["projectImage4"] != undefined) {
+    projectImage4 = req.files["projectImage4"][0].filename
+  }
+  if (req.files["projectImage5"] != undefined) {
+    projectImage5 = req.files["projectImage5"][0].filename
+  }
+  if (req.files["projectImage6"] != undefined) {
+    projectImage6 = req.files["projectImage6"][0].filename
+  }
+  if (req.files["projectImage7"] != undefined) {
+    projectImage7 = req.files["projectImage7"][0].filename
+  }
+  if (req.files["projectImage8"] != undefined) {
+    projectImage8 = req.files["projectImage8"][0].filename
   }
 
-  const newDescription = req.body.description;
+  console.log(req.files, "@#)$(#$)(@#*$)(@#* THIS IS REQ.FIlesO(*#Q*E)QW(*EWE")
   console.log(
     "******************************",
     req.body,
@@ -215,8 +237,8 @@ app.post("/add_project", upload.single("projectImage1"), (req, res, next) => {
     res.render("new_project", {
       name: req.body.projectName,
       description: req.body.projectDescription,
-      image: req.file.path,
-      filename: req.file.filename,
+      image: req.files.path,
+      filename: req.files.filename,
     });
   } else if (check.validDescription(newProjectDescription)) {
     res.render({ description: req.body.projectDescription });
@@ -233,7 +255,15 @@ app.post("/add_project", upload.single("projectImage1"), (req, res, next) => {
     newProjectDescription,
     newTeamName,
     languagesUsed,
-    projectImage1
+    projectImage1,
+    projectImage2,
+    projectImage3,
+    projectImage4,
+    projectImage5,
+    projectImage6,
+    projectImage7,
+    projectImage8
+
   )
     .then((newProject) => {
       console.log("I AM IN createProject PROMISE");
@@ -319,12 +349,12 @@ function bootupSequenceFailed(err) {
 }
 
 function fetchCategoryList() {
-  db.getCategoryList().then((lists) => {});
+  db.getCategoryList().then((lists) => { });
 }
 
 function fetchProductsList() {
   db.getProductsList().then((products) => {
-    console.log(products);
+
   });
 }
 
@@ -342,93 +372,3 @@ db.connect()
 app.get("/image", function (req, res) {
   res.render("image");
 });
-
-// FILE UPLOADS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!********************************************
-
-//   const express = require("express");
-// const multer = require("multer");
-// const ejs = require("ejs");
-// const path = require("path");
-
-// Set The Storage Engine
-// const storage = multer.diskStorage({
-//   destination: "./public/uploads/",
-//   filename: function (req, file, cb) {
-//     cb(
-//       null,
-//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-//     );
-//   },
-// });
-
-// // Init Upload
-
-// // const upload = multer({ dest: "add_project/" });
-
-// const upload = multer({
-//   storage: storage,
-//   limits: { fileSize: 1000000 },
-//   fileFilter: function (req, file, cb) {
-//     checkFileType(file, cb);
-//   },
-// }).single("projectImage1");
-
-// // Check File Type
-// function checkFileType(file, cb) {
-//   // Allowed ext
-//   const filetypes = /jpeg|jpg|png|gif/;
-//   // Check ext
-//   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-//   // Check mime
-//   const mimetype = filetypes.test(file.mimetype);
-
-//   if (mimetype && extname) {
-//     return cb(null, true);
-//   } else {
-//     cb("Error: Images Only!");
-//   }
-// }
-
-// Init app
-// const app = express();
-
-// EJS
-// app.set("view engine", "ejs");
-
-// Public Folder
-// app.use(express.static("./public"));
-
-// app.get("/add_project", (req, res) => res.render("add_project"));
-
-// var cpUpload = upload.fields([
-//   { name: "projectImage1", maxCount: 1 },
-//   { name: "projectName", maxCount: 1 },
-// ]);
-
-// app.post("/add_project", cpUpload, (req, res) => {
-//   console.log(req.file, "THIS IS FILE!!!!, FROM POST");
-//   console.log(req.body, "THIS IS BODY!!! FROM POST");
-// upload(req, res, (err) => {
-//   if (err) {
-//     res.render("add_project", {
-//       msg: err,
-//     });
-//   } else {
-//     if (req.file == undefined) {
-//       res.render("add_project", {
-//         msg: "Error: No File Selected!",
-//       });
-//     } else {
-//       console.log(req.file);
-//       res.render("add_project", {
-//         msg: "File Uploaded!",
-//         file: `uploads/${req.file.filename}`,
-//       });
-//     }
-//   }
-// });
-// });
-
-// const port = 3000;
-
-// app.listen(port, () => console.log(`Server started on port ${port}`));
