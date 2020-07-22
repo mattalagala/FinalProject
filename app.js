@@ -273,7 +273,7 @@ app.post("/add_project", cpUpload, (req, res, next) => {
     })
     .catch(() => {
       //NEED TO GET THIS FIXED
-      // res.status(500).send("The Function Didnt WOrk)
+      // res.status(500).send("The Funcon Didnt WOrk)
     });
 
   // res.redirect("/login");
