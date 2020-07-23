@@ -25,13 +25,14 @@
     <div class="container">
       {{!-- <img src="/img/logo.png" height='50'> --}}
       <a class="navbar-brand ml-2" href="#">Project Vault</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="http://localhost:9999/">Home
+            <a class="nav-link" href="https://www.northrange.dev">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -62,32 +63,33 @@
       <h1 class="display-3">Here is our inventory of {{listName}}</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
       <a href="#" class="btn btn-primary btn-lg">Call to action!</a> --}}
-    
+
     </header>
 
     <!-- Page Features -->
-   
+
     <div class="row text-center justify-content-center">
-    {{#each theItem}}
+      {{#each theItem}}
       <div class="col-lg-6 col-md-3 mb-4 ">
-      
+
         <div class="card h-100">
           <img class="card-img-top" src="{{this.products_picture}}" alt="">
           <div class="card-body d-flex flex-column mt-auto">
             <h4 class="card-title">{{this.products_model}}</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus
+              neque.</p>
           </div>
           <div class="card-footer">
-            
+
           </div>
         </div>
-        
+
       </div>
-    {{/each}}
+      {{/each}}
 
     </div>
     <!-- /.row -->
-  
+
   </div>
   <!-- /.container -->
 
