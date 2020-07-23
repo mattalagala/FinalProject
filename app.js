@@ -126,7 +126,7 @@ app.get("/contact", function (req, res) {
 });
 
 
-app.get("/add_project", function (req, res) {
+app.get("/add_project", isLoggedIn, function (req, res) {
   res.render("add_project");
 });
 
