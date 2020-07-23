@@ -121,6 +121,11 @@ app.get("/form", function (req, res) {
 //   storage: storage
 // }).single('projectImage1')
 
+app.get("/contact", function (req, res) {
+  res.render("contact");
+});
+
+
 app.get("/add_project", function (req, res) {
   res.render("add_project");
 });
