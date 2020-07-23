@@ -101,7 +101,7 @@ app.get("/login", function (req, res) {
   });
 });
 
-app.get("/form", isLoggedIn, function (req, res) {
+app.get("/form", function (req, res) {
   db.getCategoryList().then((lists) => {
     res.render("form", { lists: lists });
   });
@@ -475,7 +475,7 @@ app.param("products_id", function (req, res, nextFn, products_id) {
     });
 });
 
-app.get("/category/:category_id/:products_id", isLoggedIn, function (req, res) {
+app.get("/category/:category_id/:products_id", function (req, res) {
   const theItem = req.monkMusic.item;
   console.log(theItem, "**#*#*#*#*#*#* getItem PROMISE");
   db.getProductsList()
