@@ -121,7 +121,7 @@ app.get("/form", isLoggedIn, function (req, res) {
 //   storage: storage
 // }).single('projectImage1')
 
-app.get("/add_project", isLoggedIn, function (req, res) {
+app.get("/add_project", function (req, res) {
   res.render("add_project");
 });
 
