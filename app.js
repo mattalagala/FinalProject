@@ -60,12 +60,12 @@ app.get("/success", isLoggedIn, (req, res) => {
 
 // Google Authentication
 app.get(
-  "northrange.dev/login/google",
+  "/login/google",
   passport.authenticate("google", { scope: ["profile", "email"] })
 );
 
 app.get(
-  "northrange.dev/google/callback",
+  "/google/callback",
   passport.authenticate("google", { failureRedirect: "/failed" }),
   function (req, res) {
     // Successful authentication, redirect home.
@@ -448,7 +448,7 @@ app.param("category_id", function (req, res, nextFn, category_id) {
     });
 });
 
-app.get("/category/:category_id", isLoggedIn, function (req, res) {
+app.get("/category/:category_id", function (req, res) {
   const theProducts = req.monkMusic.products;
   const theCategory = req.monkMusic.category;
   console.log(theCategory, "**#*#*#*#*#*#* CHECK THIS OUT!!");
