@@ -60,12 +60,12 @@ app.get("/success", isLoggedIn, (req, res) => {
 
 // Google Authentication
 app.get(
-  "/login/google",
+  "northrange.dev/login/google",
   passport.authenticate("google", { scope: ["profile", "email"] })
 );
 
 app.get(
-  "/google/callback",
+  "northrange.dev/google/callback",
   passport.authenticate("google", { failureRedirect: "/failed" }),
   function (req, res) {
     // Successful authentication, redirect home.

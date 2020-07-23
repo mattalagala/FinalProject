@@ -1,32 +1,10 @@
 // Update with your config settings.
 
-// module.exports = {
-
-//   development: {
-//     client: 'pg',
-//     connection: {
-//       database: 'inventorydb',
-//       user:     'postgres',
-//       password: 'Longbow15Y'
-//     },
-//     pool: {
-//       min: 2,
-//       max: 10
-//     },
-//     migrations: {
-//       tableName: 'knex_migrations'
-//     }
-//   }
-
-// };
-
-
 module.exports = {
 
   development: {
     client: 'pg',
     connection: {
-      host: '206.81.13.50',
       database: 'inventorydb',
       user: 'postgres',
       password: 'Longbow15Y'
@@ -41,5 +19,27 @@ module.exports = {
   }
 
 };
+
+
+// module.exports = {
+
+//   development: {
+//     client: 'pg',
+//     connection: {
+//       host: '206.81.13.50',
+//       database: 'inventorydb',
+//       user: 'postgres',
+//       password: 'Longbow15Y'
+//     },
+//     pool: {
+//       min: 2,
+//       max: 10
+//     },
+//     migrations: {
+//       tableName: 'knex_migrations'
+//     }
+//   }
+
+// };
 
 
