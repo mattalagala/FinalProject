@@ -186,16 +186,21 @@ var cpUpload = upload.fields([
   { name: "projectImage6" },
   { name: "projectImage7" },
   { name: "projectImage8" },
+  { name: "onepicture" },
 ]);
 
 
 app.post("/add_project", cpUpload, (req, res, next) => {
+
+
   const newProjectName = req.body.projectName;
   const newProjectDescription = req.body.projectDescription;
   const newTeamName = req.body.teamName;
-  const languagesUsed = req.body.languagesUsed;
-  const java = req.body.JavaTest;
-  const react = req.body.ReactTest;
+
+
+
+  // Pictures uploaded
+
   const projectImage1 = req.files["projectImage1"][0].filename;
   var projectImage2 = null
   var projectImage3 = null
@@ -204,6 +209,7 @@ app.post("/add_project", cpUpload, (req, res, next) => {
   var projectImage6 = null
   var projectImage7 = null
   var projectImage8 = null
+  var onePicture = null
 
   if (req.files["projectImage2"] != undefined) {
     projectImage2 = req.files["projectImage2"][0].filename
@@ -226,6 +232,123 @@ app.post("/add_project", cpUpload, (req, res, next) => {
   if (req.files["projectImage8"] != undefined) {
     projectImage8 = req.files["projectImage8"][0].filename
   }
+  if (req.files["onepicture"] != undefined) {
+    onePicture = req.files["onepicture"][0].filename
+  }
+
+
+  // Technologies Used 
+
+  // const langJavascript = req.body.Javascript;
+  const languagesUsed = "langJavascript";
+
+  // const langReact = req.body.React;
+  // const langHTML = req.body.HTML;
+  // const langCSS = req.body.CSS;
+  // const langPython = req.body.Python;
+  // const langClojure = req.body.Clojure;
+
+  var langJavascript = null
+  var langReact = null
+  var langHTML = null
+  var langCSS = null
+  var langPython = null
+  var langNode = null
+  var langExpress = null
+  var langJSON = null
+  var langREST = null
+  var langSQL = null
+  var langCloud = null
+
+  if (req.body.javascript != undefined) {
+    langJavascript = req.body.javascript
+  }
+  if (req.body.react != undefined) {
+    langReact = req.body.react
+  }
+  if (req.body.html != undefined) {
+    langHTML = req.body.html
+  }
+  if (req.body.css != undefined) {
+    langCSS = req.body.css
+  }
+  if (req.body.python != undefined) {
+    langPython = req.body.python
+  }
+  if (req.body.node != undefined) {
+    langNode = req.body.node
+  }
+  if (req.body.express != undefined) {
+    langExpress = req.body.express
+  }
+  if (req.body.json != undefined) {
+    langJSON = req.body.json
+  }
+  if (req.body.rest != undefined) {
+    langREST = req.body.rest
+  }
+  if (req.body.sql != undefined) {
+    langSQL = req.body.sql
+  }
+  if (req.body.cloud != undefined) {
+    langCloud = req.body.cloud
+  }
+
+  //Project Info
+  var projectURL = null
+  var projectGit = null
+  var projectCohort = null
+
+
+  if (req.body.projecturl != undefined) {
+    projectURL = req.body.projecturl
+  }
+  if (req.body.projectgit != undefined) {
+    projectGit = req.body.projectgit
+  }
+  if (req.body.projectcohort != undefined) {
+    projectCohort = req.body.projectcohort
+  }
+  // if (req.body.projecturl != undefined) {
+  //   langCloud = req.body.cloud
+  // }
+  // if (req.body.cloud != undefined) {
+  //   langCloud = req.body.cloud
+  // }
+
+
+
+
+  //Team info
+
+  var memberOne = null
+  var oneEmail = null
+  var oneGit = null
+  var oneLinkedin = null
+  var oneTwitter = null
+
+  if (req.body.memberone != undefined) {
+    memberOne = req.body.memberone
+  }
+  if (req.body.oneemail != undefined) {
+    oneEmail = req.body.oneemail
+  }
+  if (req.body.onegit != undefined) {
+    oneGit = req.body.onegit
+  }
+  if (req.body.onelinkedin != undefined) {
+    oneLinkedin = req.body.onelinkedin
+  }
+  if (req.body.onetwitter != undefined) {
+    oneTwitter = req.body.onetwitter
+  }
+
+
+
+
+
+
+
 
   console.log(req.files, "@#)$(#$)(@#*$)(@#* THIS IS REQ.FIlesO(*#Q*E)QW(*EWE")
   console.log(
@@ -250,10 +373,15 @@ app.post("/add_project", cpUpload, (req, res, next) => {
     res.status(400).send("bad input");
   }
 
+  console.log(langJavascript, "HEEEYYY ITS WORKING??????????")
+
   db.createProject(
     newProjectName,
     newProjectDescription,
+    projectURL,
     newTeamName,
+    projectGit,
+    projectCohort,
     languagesUsed,
     projectImage1,
     projectImage2,
@@ -262,8 +390,18 @@ app.post("/add_project", cpUpload, (req, res, next) => {
     projectImage5,
     projectImage6,
     projectImage7,
-    projectImage8
-
+    projectImage8,
+    langJavascript,
+    langReact,
+    langHTML,
+    langCSS,
+    langPython,
+    langNode,
+    langExpress,
+    langJSON,
+    langREST,
+    langSQL,
+    langCloud
   )
     .then((newProject) => {
       console.log("I AM IN createProject PROMISE");
@@ -273,7 +411,7 @@ app.post("/add_project", cpUpload, (req, res, next) => {
     })
     .catch(() => {
       //NEED TO GET THIS FIXED
-      // res.status(500).send("The Funcon Didnt WOrk)
+      // res.status(500).send("The Funcaon Didnt WOrk)
     });
 
   // res.redirect("/login");
@@ -372,3 +510,16 @@ db.connect()
 app.get("/image", function (req, res) {
   res.render("image");
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
