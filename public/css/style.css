@@ -13,7 +13,8 @@
 
 .inner-width {
   width: 100%;
-  max-width: 1200px;
+  max-width: 980px;
+  /* max-width: 1200px; */
   margin: auto;
   padding: 0 20px;
 }
@@ -48,6 +49,7 @@
   height: 100%;
   transition: 0.4s;
 }
+
 
 .gallery-section .image:hover img {
   transform: scale(1.4) rotate(15deg);
@@ -152,6 +154,15 @@
 .product-text {
   font-size: 20px;
 }
+
+#contact-section{
+  background-color: rgb(226, 226, 226);
+}
+
+
+
+
+
 /*--------ANIMATION SETTINGS----------*/
 
 .img-content {

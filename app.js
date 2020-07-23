@@ -326,6 +326,7 @@ app.post("/add_project", cpUpload, (req, res, next) => {
   var oneGit = null
   var oneLinkedin = null
   var oneTwitter = null
+  var onePortfolio = null
 
   if (req.body.memberone != undefined) {
     memberOne = req.body.memberone
@@ -341,6 +342,9 @@ app.post("/add_project", cpUpload, (req, res, next) => {
   }
   if (req.body.onetwitter != undefined) {
     oneTwitter = req.body.onetwitter
+  }
+  if (req.body.oneportfolio != undefined) {
+    onePortfolio = req.body.oneportfolio
   }
 
 
@@ -401,7 +405,16 @@ app.post("/add_project", cpUpload, (req, res, next) => {
     langJSON,
     langREST,
     langSQL,
-    langCloud
+    langCloud,
+    memberOne,
+    oneEmail,
+    oneGit,
+    oneLinkedin,
+    onePortfolio,
+    oneTwitter,
+    onePicture
+
+
   )
     .then((newProject) => {
       console.log("I AM IN createProject PROMISE");

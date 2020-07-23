@@ -49,3 +49,5 @@ exports.up = function (knex) {
 exports.down = function (knex) {
   return knex.raw(dropCategoryTable);
 };
+
+//updated full functionality for Project Vault 
