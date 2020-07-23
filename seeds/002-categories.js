@@ -36,7 +36,7 @@ exports.seed = function (knex) {
           category_memberone: "Kevin Withrow",
           category_oneemail: "kevin.withrow83@gmail.com",
           category_onegit: "https://github.com/KevinWithrow",
-          category_onelinkedin: "www.linkedin.com/in/kevinwithrow",
+          category_onelinkedin: "https://www.linkedin.com/in/kevinwithrow",
           category_oneportfolio: "https://scottstringer.netlify.app",
           category_onetwitter: null,
           category_onepicture: "kevinprofile.jpg"
@@ -144,7 +144,7 @@ exports.seed = function (knex) {
           category_memberone: "Matthew Alagala",
           category_oneemail: "matthew.alagala@gmail.com",
           category_onegit: "https://github.com/mattalagala",
-          category_onelinkedin: "linkedin.com/in/matthew-alagala",
+          category_onelinkedin: "https://www.linkedin.com/in/matthew-alagala",
           category_oneportfolio: "https://www.matthewalagala.com",
           category_onetwitter: null,
           category_onepicture: "mattprofile.png"
