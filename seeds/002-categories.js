@@ -130,7 +130,7 @@ exports.seed = function (knex) {
           category_picture6: "mattproject6.jpg",
           category_picture7: "mattproject7.jpg",
           category_picture8: "mattproject8.jpg",
-          category_javascript: "mattproject9.jpg",
+          category_javascript: "Javascript",
           category_react: null,
           category_html: "HTML",
           category_css: "CSS",
