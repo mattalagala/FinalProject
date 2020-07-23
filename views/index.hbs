@@ -13,10 +13,12 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/38d7facff3.js" crossorigin="anonymous"></script>
 
   <!-- Custom styles for this template -->
   <link href="css/heroic-features.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/style2.css" rel="stylesheet">
 
 </head>
 
@@ -76,9 +78,16 @@
       <p classcenter">We have a wide selection of equipment ranging from live performance to recording!</p>
     </header> --}}
 
+
+
+
+
+    <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
+
+
     <!-- Page Features -->
 
-    <div class="row text-center justify-content-center">
+    <div class="row text-center justify-content-center" id="myItems">
       {{#each lists}}
       <div class="col-4">
         {{!-- col-lg-2 col-md-2 mb-4 --}}
@@ -92,9 +101,24 @@
               <h6 id="card-description-title">Description</h2>
                 <p class="card-text">{{this.category_description}}</p>
                 <h6 id="card-description-title">Languages Used</h2>
-                  <p class="card-text">{{this.category_languages}}</p>
-                  <h6 id="card-description-title">Display UUID <-- //For Testing</h2>
-                      <p class="card-text">{{this.category_id}}</p>
+                  <div>
+                    {{#if this.category_javascript}}
+                    <i class="fab fa-js-square" id="indIcon"></i>
+                    {{/if}}
+
+                    {{#if this.category_react}}
+                    <i class="fab fa-react" id="indIcon"></i>
+                    {{/if}}
+
+                    {{#if this.category_html}}
+                    <i class="fab fa-html5" id="indIcon"></i>
+                    {{/if}}
+
+                  </div>
+                  {{!-- <p class="card-text" id="testThis">{{this.category_languages}}</p> --}}
+
+
+
 
           </div>
           <div class="card-footer">
@@ -121,6 +145,25 @@
 <!-- Bootstrap core JavaScript -->
 <script src="/vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+  function myFunction() {
+    var input, filter, cards, cardContainer, h4, title, i;
+    input = document.getElementById("myFilter");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("myItems");
+    cards = cardContainer.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".card-body #testThis");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+
+</script>
+
 
 </body>
 

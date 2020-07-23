@@ -32,8 +32,9 @@
     }
   </style>
   <!-- Custom styles for this template -->
-  <link href="css/form-validation.css" rel="stylesheet">
 
+  <link href="/css/style2.css" rel="stylesheet">
+  <link href="/css/form-validation.css" rel="stylesheet">
 
 </head>
 
@@ -94,36 +95,35 @@
           {{!-- <form class="form-signin" action="/add_project" method="POST" enctype="multipart/form-data"> --}}
           <div class="row">
             <div class="col-md-12 mb-3">
-              <label>Project Name</label>
+              <label id="sect-title">Project Name</label>
               <input type="text" class="form-control" id="add-project-fields" name="projectName">
 
-              <label>Project Description</label>
-              <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label>Project URL</label>
-              <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <label>Github Repo</label>
+              <label id="sect-title">Project Description</label>
               <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label>Project Links</label>
-              <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
+              <label id="sect-title">Project URL</label>
+              <input type="text" class="form-control" id="add-project-fields" name="projecturl">
             </div>
 
             <div class="col-md-6 mb-3">
-              <label>Cohort</label>
-              <input type="text" class="form-control" id="add-project-fields" name="projectDescription">
+              <label id="sect-title">Github Repo</label>
+              <input type="text" class="form-control" id="add-project-fields" name="projectgit">
+            </div>
+          </div>
+
+          <div class="row">
+            {{!-- <div class="col-md-6 mb-3">
+              <label id="sect-title">Project Links</label>
+              <input type="text" class="form-control" id="add-project-fields" name="projectLinks">
+            </div> --}}
+
+            <div class="col-md-6 mb-3">
+              <label id="sect-title">Cohort</label>
+              <input type="text" class="form-control" id="add-project-fields" name="projectcohort">
             </div>
           </div>
 
@@ -131,7 +131,7 @@
 
           <!-- IMAGE UPLOAD SECTION -->
           <div class="row">
-            <div class="col-md-12 mb-3">Project Screenshots</div>
+            <div class="col-md-12 mb-3" id="sect-title">Project Screenshots</div>
 
             <div class="col-md-6 mb-3">
 
@@ -162,49 +162,132 @@
               <input type="file" class="form-contrl-file" id="add-project-fields" name="projectImage8">
             </div>
 
+            <div class="col-md-12 mb-3">
+              <label id="sect-title">Languages Used</label>
+
+              <div class="row col-md-12">
+                <label for="javascript" class="checkbox-inline col-md-4 mb-3 form-control">
+                  <input type="checkbox" id="inlineCheckbox1" name="javascript" value="javascript"> JavaScript
+                </label>
+
+
+                <label for="react" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="react" value="react"> React
+                </label>
+
+
+                <label for="html" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="html" value="html"> HTML
+                </label>
+
+              </div>
+
+              <div class="row col-md-12">
+                <label for="css" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="css" value="css"> CSS
+                </label>
+
+
+                <label for="python" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="python" value="python"> Python
+                </label>
+
+
+                <label for="node" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="node" value="node"> Node.JS
+                </label>
+              </div>
+
+              <div class="row col-md-12">
+                <label for="express" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="express" value="express"> Express
+                </label>
+
+
+                <label for="json" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="json" value="json"> JSON
+                </label>
+
+
+                <label for="rest" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="rest" value="rest"> REST API
+                </label>
+              </div>
+
+              <div class="row col-md-12">
+                <label for="sql" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="sql" value="sql"> Database
+                </label>
+
+
+                <label for="cloud" class="checkbox-inline form-control col-md-4 mb-3">
+                  <input type="checkbox" id="inlineCheckbox2" name="cloud" value="cloud"> Cloud
+                </label>
+
+              </div>
+
+            </div>
+
+
           </div>
+
+
+
+
+
+
+
+
 
 
           <h4 class="mb-3">Team Info</h4>
-          <label>Team Name</label>
+          <label id="sect-title">Group Name</label>
           <input type="text" class="form-control" id="add-project-fields" name="teamName">
-          <label>Languages Used</label>
-          <input type="text" class="form-control" id="add-project-fields" name="languagesUsed">
 
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label id="sect-title">Team Member 1 Name</label>
+              <input type="text" class="form-control" id="add-project-fields" name="memberone">
+            </div>
 
-
-
-          <div class="checkbox form-control">
-            <label>
-              <input type="checkbox"> Check me out
-            </label>
+            <div class="col-md-6 mb-3">
+              <label id="sect-title">Email</label>
+              <input type="text" class="form-control" id="add-project-fields" name="oneemail">
+            </div>
           </div>
-          <div class="checkbox form-control">
-            <label>
-              <input type="checkbox" value="" checked>
-              I'm selected because I seem like the safe choice
-            </label>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label id="sect-title">Github</label>
+              <input type="text" class="form-control" id="add-project-fields" name="onegit">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label id="sect-title">LinkedIn</label>
+              <input type="text" class="form-control" id="add-project-fields" name="onelinkedin">
+
+            </div>
           </div>
-          <div class="checkbox disabled form-control">
-            <label>
-              <input type="checkbox" value="" disabled>
-              Option is disabled because it is scary
-            </label>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label id="sect-title">Twitter</label>
+              <input type="text" class="form-control" id="add-project-fields" name="onetwitter">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label id="sect-title">Profile Picture</label>
+              <input type="file" class="form-contrl-file" id="add-project-fields" name="onepicture">
+
+            </div>
           </div>
-          <label class="checkbox-inline form-control">
-            <input type="checkbox" id="inlineCheckbox1" name="JavaTest" value="JAVA TEST"> JAVA TEST
-          </label>
-          <label class="checkbox-inline form-control">
-            <input type="checkbox" id="inlineCheckbox2" name="ReactTest" value="REACT.js TEST"> REACT.js TEST
-          </label>
-          <label class="checkbox-inline form-control">
-            <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-          </label>
 
 
 
 
 
+
+          <!-- Submit Button -->
           <input type="submit" value="Add Item" class="btn btn-primary btn-lg ">
 
         </form>

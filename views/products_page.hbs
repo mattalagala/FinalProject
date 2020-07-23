@@ -17,12 +17,19 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://kit.fontawesome.com/38d7facff3.js" crossorigin="anonymous"></script>
+
 
 
   <!-- Custom styles for this template -->
   <link href="/css/heroic-features.css" rel="stylesheet">
   <link href="/css/style2.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
+  <style>
+    .bs-example {
+      margin: 20px;
+    }
+  </style>
 
 
 
@@ -197,37 +204,70 @@
       <div class="col-lg-8 col-md-3 mb-4">
         <h4 id="card-description-title">Description</h4>
         <p class="product-text">{{this.category_description}}</p>
-      </div>
-      <div class="col-lg-4 col-md-3 mb-4">
-        <h4 id="card-description-title">Members</h2>
-          <p class="product-text">{{this.category_languages}}</p>
-      </div>
 
-      <div class="col-lg-8 col-md-3 mb-4">
-        {{!-- <h4 id="card-description-title">Description</h4>
-        <p class="product-text">{{this.category_description}}</p> --}}
-      </div>
-      <div class="col-lg-4 col-md-3 mb-4">
-        <h4 id="card-description-title">Project Link</h2>
-          <p class="product-text">{{this.category_languages}}</p>
-      </div>
-
-      <div class="col-lg-8 col-md-3 mb-4">
         <h4 id="card-description-title">Technologies Used</h4>
-        <p class="product-text">{{this.category_languages}}</p>
-      </div>
-      <div class="col-lg-4 col-md-3 mb-4">
-        <h4 id="card-description-title">Cohort</h2>
-          <p class="product-text">{{this.category_languages}}</p>
-      </div>
+        <div class="row">
+          {{#if this.category_javascript}}
+          <i class="fab fa-js-square"></i>
+          {{/if}}
 
-      <div class="col-lg-8 col-md-3 mb-4">
-        {{!-- <h4 id="card-description-title">Description</h4>
-        <p class="product-text">{{this.category_description}}</p> --}}
+          {{#if this.category_react}}
+          <i class="fab fa-react"></i>
+          {{/if}}
+
+          {{#if this.category_html}}
+          <i class="fab fa-html5"></i>
+          {{/if}}
+
+          {{#if this.category_css}}
+          <i class="fab fa-css3-alt"></i>
+          {{/if}}
+
+          {{#if this.category_python}}
+          <i class="fab fa-python"></i>
+          {{/if}}
+
+          {{#if this.category_node}}
+          <i class="fab fa-node-js"></i>
+          {{/if}}
+
+          {{#if this.category_express}}
+          <i class="fab fa-js-square"></i>
+          {{/if}}
+
+          {{#if this.category_json}}
+
+          {{/if}}
+
+          {{#if this.category_rest}}
+
+          {{/if}}
+
+          {{#if this.category_sql}}
+          <i class="fas fa-database"></i>
+          {{/if}}
+
+          {{#if this.category_cloud}}
+          <i class="fas fa-cloud-upload-alt"></i>
+          {{/if}}
+
+
+        </div>
       </div>
       <div class="col-lg-4 col-md-3 mb-4">
-        <h4 id="card-description-title">Cohort</h2>
-          <p class="product-text">{{this.category_languages}}</p>
+
+        <h4 id="card-description-title">Team Name</h2>
+          <p class="product-text">{{this.category_team_name}}</p>
+
+          <h4 id="card-description-title">Members</h2>
+            <p class="product-text">{{this.category_memberone}}</p>
+
+            <h4 id="card-description-title">Project Link</h2>
+              <a class="product-text" href="{{this.category_git}}" target='blank'>{{this.category_git}}</a>
+
+              <h4 id="card-description-title">Cohort</h2>
+                <p class="product-text">{{this.category_cohort}}</p>
+
       </div>
 
     </div>
@@ -236,48 +276,115 @@
 
 
 
+
+
+
+
+
   <div class="section w-100" id="contact-section">
     <div class="container">
-      <div class="row text-center justify-content-center">
-
-        <div class="col-lg-10 col-md-3 mb-4">
-
-          <!-- Team Info -->
 
 
 
+      <div class="row text-left justify-content-center">
 
-          <div class="row text-center justify-content-center">
+        <div class="col-lg-2 col-md-4 mb-4">
+          <h4 id="card-description-title"></h4>
+          <img class="card-img-top" alt="Responsive image" src="/uploads/{{this.category_onepicture}}">
 
-            <div class="col-4">
+          <h4 id="contact-description-title">Developer</h2>
+            <p class="product-text">{{this.category_memberone}}</p>
+            <div class="row">
 
-              <div class="card h-100">
-                <img class="card-img-top rounded-circle" id="testImage" alt="Responsive image"
-                  src="/uploads/{{this.category_picture}}">
-                <div class=" card-body d-flex flex-column mt-auto">
-                  <h4 class="card-title">{{this.category_name}}</h4>
-                  <h6 id="card-description-title">Group Name</h2>
-                    <p class="card-text">{{this.category_team_name}}</p>
-                    <h6 id="card-description-title">Description</h2>
-                      <p class="card-text">{{this.category_description}}</p>
-                      <h6 id="card-description-title">Languages Used</h2>
-                        <p class="card-text">{{this.category_languages}}</p>
-                        <h6 id="card-description-title">Display UUID <-- //For Testing</h2>
-                            <p class="card-text">{{this.category_id}}</p>
-                </div>
-                <div class="card-footer">
-                  <a href="/category/{{this.category_id}}" class="btn btn-primary" id="checkout-btn">View Details</a>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
 
+        <div class="col-lg-4 col-md-3 mb-4">
+
+
+          <h4 id="contact-description-title">Social</h2>
+
+
+            {{#if this.category_onegit}}
+            <a href="{{this.category_git}}" target="blank"><i class="fab fa-github-square" id="socialIcons"></i></a>
+            {{/if}}
+
+            {{#if this.category_onelinkedin}}
+            <a href="{{this.category_linkedin}}" target="blank"><i class="fab fa-linkedin" id="socialIcons"></i></a>
+            {{/if}}
+
+            {{#if this.category_onetwitter}}
+            <a href="{{this.category_twitter}}" target="blank"><i class="fab fa-twitter-square"
+                id="socialIcons"></i></a>
+            {{/if}}
+
+            <h4 id="contact-description-title">Email</h2>
+              <p class="product-text">{{this.category_oneemail}}</p>
+
+              <h4 id="contact-description-title">Cohort</h2>
+                <p class="product-text">{{this.category_cohort}}</p>
 
         </div>
-        <!-- /.row -->
+
+
+
+
       </div>
 
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{!-- 
+
+
+
+    <div class="row text-center justify-content-center p-4">
+
+      <div class="col-lg-6 col-md-3 mb-4">
+
+        <!-- Team Info -->
+
+        <div class="row text-center justify-content-center">
+          <div class="col-6">
+            <div class="card h-100">
+              <img class="card-img-top" alt="Responsive image" src="/uploads/{{this.category_onepicture}}">
+              <div class=" card-body d-flex flex-column mt-auto">
+                <h4 class="card-title">{{this.category_memberone}}</h4>
+                <h6 id="card-description-title">Email</h2>
+                  <p class="card-text">{{this.category_oneemail}}</p>
+
+
+              </div>
+              <div class="card-footer">
+                <a href="/category/{{this.category_id}}" class="btn btn-primary" id="checkout-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div> --}}
+    <!-- /.row -->
+  </div>
+
+  </div>
 
   </div>
   {{/each}}
