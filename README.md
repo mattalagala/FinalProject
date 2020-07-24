@@ -42,7 +42,7 @@ Users will be required to provide the following information under "Add Project" 
 \**Future releases will incorporate additional members*\*
 
 ## SCOPE
-Project Vault is a Node.js and Express web application, utilzing Passport.js (for authentication), Knex (for SQL interface), and PostgreSQL. T
+Project Vault is a Node.js and Express web application, utilzing Passport.js (for authentication), Knex (for SQL interface), and PostgreSQL.
 
 ### WORKFLOW
 1. User clicks the individual project card on the Home page.
@@ -53,9 +53,8 @@ Project Vault is a Node.js and Express web application, utilzing Passport.js (fo
 5. Project Vault is a Nodejs app which is deployed on a DigitalOcean droplet, using NGINX for dynamic redirects from the droplets public IP to a TLD. The PostgreSQL database is also housed on the same droplet. 
 
 ## SUBSCRIBERS
-Registered users will be able to "Add Projects" and update projects. 
-
-All users will be able to browse the projects. 
+1. Registered users will be able to "Add Projects" and update projects. 
+2. All users will be able to browse the projects. 
 
 ## FUTURE RELEASES
 1. In future releases Project Vault will be able to email subscribers (specifically employers) of future projects. 
