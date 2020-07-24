@@ -4,14 +4,13 @@ Project Vault is a market for final projects or any projects that bootcamp stude
 
 ## PROJECT VAULT SCREENSHOTS
 
-<img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg" width="200">
+<img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg" width="480"> <img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject2.jpg" width="480">
 
-![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg)<!-- .element height="50%" width="50%" -->
+<img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject3.jpg" width="480">
+<img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject4.jpg" width="480">
+<img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject8.jpg" width="480">
 
-![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject2.jpg)
-![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject3.jpg)
-![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject4.jpg)
-![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject8.jpg)
+
 
 
 
