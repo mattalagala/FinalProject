@@ -3,9 +3,9 @@
 Project Vault is a market for final projects or any projects that bootcamp students want to showcase. Users will be able to sign in individually or as a group and highlight various attributes (screenshots, descriptions, languages, functionality, etc) for their project. These projects will be available for employers to browse through and contact the groups if they so choose. 
 
 ## PROJECT VAULT SCREENSHOTS
-
+### Home Page showing the idividual projects in a card layout.
 <img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg" width="480" align="center"> 
-### Home Page showing the idividual projects in a card layout. 
+ 
 
 <img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject2.jpg" width="480" align="center">
 
