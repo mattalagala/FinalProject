@@ -2,18 +2,14 @@
 
 Project Vault is a market for final projects or any projects that bootcamp students want to showcase. Users will be able to sign in individually or as a group and highlight various attributes (screenshots, descriptions, languages, functionality, etc) for their project. These projects will be available for employers to browse through and contact the groups if they so choose. 
 
-## PROJECT VAULT USERS INPUT
+## PROJECT VAULT SCREENSHOTS
 
+![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg){width:70%;}
 
-![Image of Yaktocat](public/uploads)
-![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg)
-![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject2.jpg)
-![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject3.jpg)
-![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject4.jpg)
-![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject5.jpg)
-![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject6.jpg)
-![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject7.jpg)
-![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject8.jpg)
+![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject2.jpg)
+![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject3.jpg)
+![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject4.jpg)
+![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject8.jpg)
 
 
 
