@@ -5,7 +5,16 @@ Project Vault is a market for final projects or any projects that bootcamp stude
 ## PROJECT VAULT USERS INPUT
 
 
-![alternativetext](public/uploads/mattprojec1.jpg)
+![Image of Yaktocat](public/uploads)
+![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg)
+![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject2.jpg)
+![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject3.jpg)
+![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject4.jpg)
+![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject5.jpg)
+![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject6.jpg)
+![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject7.jpg)
+![Image of Yaktocat](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject8.jpg)
+
 
 
 
