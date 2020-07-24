@@ -3,19 +3,20 @@
 Project Vault is a market for final projects or any projects that bootcamp students want to showcase. Users will be able to sign in individually or as a group and highlight various attributes (screenshots, descriptions, languages, functionality, etc) for their project. These projects will be available for employers to browse through and contact the groups if they so choose. 
 
 ## PROJECT VAULT SCREENSHOTS
-##### Home Page showing the idividual projects in a card layout.
+##### 1) Home Page showing the idividual projects in a card layout.
 <img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg" width="480" align="center"> 
  
-##### Users can utilize search field and "Filter By Technology" to sort by the technologies used (Javascript, React etc.). * Future releases will have more search options. 
+##### 2a) Users can utilize search field and "Filter By Technology" to sort by the technologies used (Javascript, React etc.). * Future releases will have more search options. 
 <img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject2.jpg" width="480" align="center">
 
+##### 2b) 
 <img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject3.jpg" width="480" align="center">
 
-##### The Add Project page allows registered users to input new projects to include "Project Information", "Project Images", "Team Info" and "Member Info".
+##### 3) The Add Project page allows registered users to input new projects to include "Project Information", "Project Images", "Team Info" and "Member Info".
 
 <img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject4.jpg" width="480" align="center">
 
-##### Registered users are allowed to create their own username and password or use the Google authentication to sign in and add a project. * Currently Google OAuth is disabled to allow users to demo the site before launch. 
+##### 4) Registered users are allowed to create their own username and password or use the Google authentication to sign in and add a project. * Currently Google OAuth is disabled to allow users to demo the site before launch. 
 <img src="https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject8.jpg" width="480" align="center">
 
 
