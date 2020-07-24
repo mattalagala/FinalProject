@@ -28,18 +28,18 @@ Project Vault is a market for final projects or any projects that bootcamp stude
 Users will be required to provide the following information under "Add Project" to create a new project:
 
 **Project Section**
-Project Name: 
-Project Description: 
-Project Social Information: *Ex: URL, Git Repo, Cohort*
-Project Screencaptures: *Ex: Image 1 is required, upload up to 8 images*
-Languages Utilized: *Select technologies used by clicking the checkboxes*
+* Project Name: 
+* Project Description: 
+* Project Social Information: *Ex: URL, Git Repo, Cohort*
+* Project Screencaptures: *Ex: Image 1 is required, upload up to 8 images*
+* Languages Utilized: *Select technologies used by clicking the checkboxes*
 
 **Team Info**
-Team Name:
-Team Members:
-Team Member Social: *Ex: Git Repo, LinkedIn, Twiter, etc*
+* Team Name:
+* Team Members:
+* Team Member Social: *Ex: Git Repo, LinkedIn, Twiter, etc*
 
-*Future releases will incorporate additional members*
+\**Future releases will incorporate additional members*\*
 
 ## SCOPE
 Project Vault is a Node.js and Express web application, utilzing Passport.js (for authentication), Knex (for SQL interface), and PostgreSQL. T
