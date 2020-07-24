@@ -4,7 +4,7 @@ Project Vault is a market for final projects or any projects that bootcamp stude
 
 ## PROJECT VAULT SCREENSHOTS
 
-![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg){width:70%;}
+![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject1.jpg)<!-- .element height="50%" width="50%" -->
 
 ![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject2.jpg)
 ![Image of Project Vault](https://github.com/mattalagala/FinalProject/blob/master/public/uploads/mattproject3.jpg)
