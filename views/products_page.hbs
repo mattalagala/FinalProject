@@ -262,10 +262,10 @@
 
           <h4 id="card-description-title">Members</h2>
             <p class="product-text">{{this.category_memberone}}</p>
-
+            {{#if this.category_url}}
             <h4 id="card-description-title">URL</h2>
               <a class="product-text" href="{{this.category_url}}" target='blank'>{{this.category_url}}</a>
-
+              {{/if}}
               <h4 id="card-description-title">Cohort</h2>
                 <a href="https://www.digitalcrafts.com" target="blank">
                   <p class="product-text">{{this.category_cohort}}</p>
